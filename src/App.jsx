@@ -9,19 +9,43 @@ function useMeta() {
   }, []);
 }
 
-const C = {
-  bg:"#fdf8f3", bgAlt:"#f7f0e6", bgDark:"#2a1810",
-  cream:"#faf5ee", creamDark:"#f0e8dc", white:"#ffffff",
-  primary:"#b85c35", primaryLight:"#d4956a", primaryPale:"#fdf0ec",
-  olive:"#4a5a38", olivePale:"#e8eede",
-  text:"#2a1810", textMid:"#6b5040", muted:"#b0987e", mutedLight:"#c8b5a0",
-  border:"#ecddd0", borderLight:"#f5ede4",
-};
-
 const NAVS = ["expertise","projets","articles"];
 const NAVLABELS = { expertise:"Expertise", projets:"Projets", articles:"Articles" };
 
+// Ordre d'affichage : plus récent en premier
+// Numéro affiché (a.id) : ordre de publication, du plus ancien
 const ARTICLES = [
+  {
+    id: 3,
+    cat: "Analyse",
+    date: "10 mars 2026",
+    title: "IA et exercices de crise : simuler l'imprévisible pour mieux y résister",
+    excerpt: "La plupart des exercices de crise testent les plans dans des conditions connues, avec des équipes préparées et un calendrier fixé à l'avance. Ce n'est pas de la simulation — c'est de la répétition structurée. L'IA change cette équation.",
+    tags: ["IA","Exercices de crise","Résilience","Continuité","Simulation"],
+    intro: "En résilience opérationnelle, la qualité d'un plan de continuité d'activité ne se mesure pas à son épaisseur. Elle se mesure à sa capacité à tenir sous pression.\n\nDans la réalité, la plupart des exercices de crise souffrent d'un même défaut : ils testent le plan dans des conditions connues, avec des équipes préparées, selon un calendrier fixé à l'avance. Ce n'est pas de la simulation. C'est de la répétition structurée.\n\nEn 2026, l'intelligence artificielle change la donne : elle permet aux équipes de vivre les exercices de façon directe, avec des conséquences imprévues à leurs actions, se rapprochant des conditions de crise réelle.",
+    sections: [
+      {
+        heading: "Les limites des exercices traditionnels",
+        content: "Tester un PCA est une exigence reconnue. L'ISO 22301, référentiel de management de la continuité d'activité, recommande des exercices réguliers pour valider les plans et identifier les failles. DORA l'impose depuis 2025 pour les acteurs financiers. La bonne pratique est connue : tester au moins une fois par an.\n\nDans la réalité, ces exercices prennent le plus souvent la forme d'exercices sur table — des simulations en groupe où les participants discutent de leurs réponses à un scénario fictif, dans une salle de réunion, avec le plan sous les yeux.\n\nCes exercices ont de la valeur. Ils sensibilisent, créent une culture commune, révèlent certaines lacunes organisationnelles. Mais ils présentent des angles morts majeurs : les scénarios sont connus à l'avance ou facilement anticipables, les participants jouent le jeu dans des conditions optimales, les interactions en temps réel sont difficiles à reproduire fidèlement, et les plans sont consultés pendant l'exercice là où en situation réelle ils ne le sont souvent pas, faute de temps.\n\nPar définition, un plan de continuité ne peut être définitif. Il doit être mis à jour en fonction du contexte et des retours d'expérience — mais la mise à jour ne suffit pas si l'exercice lui-même ne permet pas de révéler les vraies failles."
+      },
+      {
+        heading: "Ce que l'IA change dans la simulation de crise",
+        content: "Les simulations assistées par l'IA permettent de reproduire fidèlement les comportements des acteurs, les interactions et la dynamique des événements, offrant une expérience immersive difficile à obtenir avec des exercices traditionnels.\n\nDes scénarios dynamiques et imprévisibles. Là où un exercice classique suit un script fixe, l'IA peut générer des scénarios évolutifs qui s'adaptent en temps réel aux décisions prises par les équipes. Une décision de communication mal calibrée peut ainsi déclencher une nouvelle séquence d'événements — comme dans une crise réelle.\n\nUne accélération du tempo. Les simulations accélérées permettent de tester en quelques heures des scénarios qui se déploieraient sur plusieurs semaines dans la réalité. Cette compression du temps est précieuse : elle permet de simuler des crises longues — rupture d'approvisionnement, crise réputationnelle, escalade géopolitique — sans mobiliser les équipes pendant des jours.\n\nUne analyse objective des performances. Les outils génèrent des tableaux de bord, mesurent les temps de réaction, identifient les goulots d'étranglement décisionnels — sans complaisance.\n\nDes simulations immersives multi-acteurs. Ces exercices sont particulièrement efficaces pour former les cellules de crise à gérer la pression médiatique et les décisions rapides, préparer les porte-parole à répondre en temps réel, et tester la coordination des équipes sur des incidents multisectoriels.\n\nDes propositions de stratégie de contournement. Une fois l'exercice terminé, l'IA peut — en se basant sur le comportement des acteurs et les meilleures pratiques du marché — proposer des stratégies adaptées, avec une vision transverse que les équipes n'ont pas toujours en interne."
+      },
+      {
+        heading: "Un exemple concret : l'ANSSI et le Sommet pour l'Action sur l'IA",
+        content: "La dimension institutionnelle de ces approches est déjà visible. Dans le contexte du Sommet pour l'Action sur l'IA de février 2025, l'ANSSI a organisé un exercice de gestion de crise en collaboration avec le Campus Cyber. L'objectif était notamment de renforcer les échanges entre les communautés de professionnels de l'IA et d'experts de la cybersécurité, afin d'identifier les mesures de gouvernance, de défense et de résilience nécessaires pour accroître la sécurité des systèmes d'IA.\n\nCe type d'exercice hybride — où l'IA est à la fois le sujet et l'outil — illustre une évolution de fond : les organisations les plus exposées intègrent déjà ces approches dans leur préparation opérationnelle."
+      },
+      {
+        heading: "Les conditions de succès",
+        content: "L'IA ne transforme pas un mauvais exercice en bon exercice. Elle amplifie la qualité de ce qui est déjà bien conçu — et révèle plus directement ce qui ne l'est pas.\n\nDes données fiables en entrée. La qualité des simulations dépend directement de la qualité des données disponibles : cartographie des activités critiques, inventaire des dépendances, historique des incidents. Un BIA solide reste le prérequis indispensable.\n\nUne gouvernance claire de l'outil. La supervision humaine reste essentielle. Déléguer la conception des scénarios à l'IA sans cadre de validation expose à des simulations déconnectées du contexte réel de l'organisation.\n\nUne intégration dans une démarche continue. Un exercice IA isolé n'a pas plus de valeur qu'un exercice tabletop isolé. C'est la capacité à itérer rapidement — intégrer les retours d'expérience, faire évoluer les scénarios — qui en fait un levier durable, pas un événement ponctuel.\n\nNe pas confondre simulation et résilience. Simuler mieux ne signifie pas être plus résilient. L'exercice, aussi sophistiqué soit-il, ne vaut que si ses enseignements sont traduits en décisions concrètes : mise à jour des plans, ajustement des seuils de déclenchement, renforcement des alternatives identifiées comme fragiles."
+      },
+      {
+        heading: "Conclusion",
+        content: "Les organisations qui testent leurs plans dans des conditions trop confortables créent une illusion de préparation. La crise réelle n'annonce pas son scénario, ne prévient pas de son timing, et ne laisse pas le temps de consulter le plan page par page.\n\nL'IA ne supprime pas l'imprévu. Mais elle permet de s'y confronter de manière plus réaliste, plus fréquente et plus instructive que les approches traditionnelles. Elle rend les exercices moins confortables — et c'est précisément là sa valeur.\n\nCe qui distingue les organisations véritablement résilientes, ce n'est pas la qualité de leur documentation. C'est leur capacité à apprendre vite, à ajuster en continu, et à transformer chaque simulation — même imparfaite — en décision opérationnelle concrète.\n\nUn plan qui n'a jamais été mis sous pression réelle n'est qu'une hypothèse. L'IA offre aujourd'hui les moyens de le tester autrement — plus souvent, plus profondément, plus honnêtement."
+      },
+    ]
+  },
   {
     id: 1,
     cat: "Analyse",
@@ -185,7 +209,6 @@ function Ey({ children, light, style }) {
   return <div style={{ fontSize:12, letterSpacing:"0.18em", textTransform:"uppercase", fontWeight:500,
     color:light?"rgba(255,255,255,0.35)":"#b85c35", display:"flex", alignItems:"center", gap:8, ...style }}>{children}</div>;
 }
-
 function Btn({ children, onClick, href, outline, style, sm }) {
   const base = { display:"inline-flex", alignItems:"center", gap:6,
     padding:sm?"11px 22px":"13px 28px", borderRadius:24, cursor:"pointer",
@@ -196,16 +219,13 @@ function Btn({ children, onClick, href, outline, style, sm }) {
   if (href) return <a href={href} target="_blank" rel="noopener noreferrer" style={base}>{children}</a>;
   return <button onClick={onClick} style={base}>{children}</button>;
 }
-
 function Tag({ children, dark }) {
   return <span style={{ padding:"5px 12px", borderRadius:3, fontSize:12, fontWeight:500,
     background:dark?"rgba(255,255,255,0.08)":"#fdf0ec", color:dark?"rgba(255,255,255,0.6)":"#b85c35" }}>{children}</span>;
 }
-
 function Card({ children, style, className, onClick }) {
   return <div className={className} onClick={onClick} style={{ background:"#fff", border:"1px solid #ecddd0", borderRadius:8, padding:32, ...style }}>{children}</div>;
 }
-
 function BackBtn({ onClick, label }) {
   return (
     <button onClick={onClick} style={{ background:"none", border:"none", cursor:"pointer",
@@ -281,8 +301,7 @@ function Hero({ setView }) {
   return (
     <section style={{ minHeight:"100vh", display:"flex", flexDirection:"column", justifyContent:"center", paddingTop:72, background:"#fdf8f3" }}>
       <div style={{ maxWidth:1180, margin:"0 auto", padding:"64px 40px 40px", width:"100%" }}>
-        <div className="au" style={{ height:3, marginBottom:56, borderRadius:2,
-          background:"linear-gradient(90deg,#b85c35 0%,#d4956a 55%,#f0e8dc 100%)" }} />
+        <div className="au" style={{ height:3, marginBottom:56, borderRadius:2, background:"linear-gradient(90deg,#b85c35 0%,#d4956a 55%,#f0e8dc 100%)" }} />
         <div style={{ display:"grid", gridTemplateColumns:"1.45fr 1fr", gap:60, alignItems:"start" }} className="m1">
           <div>
             <Ey style={{ marginBottom:20 }} className="au d1">Senior Business Analyst</Ey>
@@ -423,11 +442,11 @@ function SectionArticles({ setView }) {
           </div>
           <Btn onClick={() => setView("articles")}>Tous les articles →</Btn>
         </div>
-        {ARTICLES.map((a,i) => (
+        {ARTICLES.map((a) => (
           <div key={a.id} onClick={() => setView(`article-${a.id}`)} style={{ display:"grid", gridTemplateColumns:"90px 1fr 36px", gap:32, padding:"32px 0", borderBottom:"1px solid rgba(255,255,255,.07)", cursor:"pointer", alignItems:"center", transition:"padding-left .2s" }}
             onMouseEnter={e => e.currentTarget.style.paddingLeft="12px"}
             onMouseLeave={e => e.currentTarget.style.paddingLeft="0"}>
-            <div style={{ fontFamily:"'Fraunces',serif", fontSize:48, fontWeight:300, color:"rgba(255,255,255,.08)", lineHeight:1 }}>{String(i+1).padStart(2,"0")}</div>
+            <div style={{ fontFamily:"'Fraunces',serif", fontSize:48, fontWeight:300, color:"rgba(255,255,255,.08)", lineHeight:1 }}>{String(a.id).padStart(2,"0")}</div>
             <div>
               <div style={{ fontSize:12, color:"#b85c35", textTransform:"uppercase", letterSpacing:"0.12em", marginBottom:9 }}>{a.cat} · {a.date}</div>
               <div style={{ fontFamily:"'Fraunces',serif", fontSize:"clamp(20px,2.2vw,27px)", fontWeight:300, color:"#f0e8dc", lineHeight:1.3, marginBottom:10 }}>{a.title}</div>
@@ -610,11 +629,11 @@ function PageArticles({ setView }) {
       <section style={{ padding:"80px 40px" }}>
         <div style={{ maxWidth:940, margin:"0 auto" }}>
           <div style={{ display:"flex", flexDirection:"column", gap:26 }}>
-            {ARTICLES.map((a,i) => (
+            {ARTICLES.map((a) => (
               <div key={a.id} onClick={() => setView(`article-${a.id}`)} className="hl"
                 style={{ display:"grid", gridTemplateColumns:"110px 1fr", gap:40, background:"#fff", border:"1px solid #ecddd0", borderRadius:8, padding:"42px", cursor:"pointer" }}>
                 <div>
-                  <div style={{ fontFamily:"'Fraunces',serif", fontSize:64, fontWeight:300, color:"#f0e8dc", lineHeight:1, marginBottom:12 }}>{String(i+1).padStart(2,"0")}</div>
+                  <div style={{ fontFamily:"'Fraunces',serif", fontSize:64, fontWeight:300, color:"#f0e8dc", lineHeight:1, marginBottom:12 }}>{String(a.id).padStart(2,"0")}</div>
                   <div style={{ fontSize:14, color:"#b0987e" }}>{a.date}</div>
                 </div>
                 <div>
@@ -747,13 +766,12 @@ export default function App() {
   const [view, setView] = useState("accueil");
   useMeta();
   const go = v => { setView(v); window.scrollTo({ top:0, behavior:"smooth" }); };
-
   return (
     <>
       <style>{G}</style>
       <Nav view={view} setView={go} />
       <main>
-        {view === "accueil" && <><Hero setView={go}/><SectionAbout setView={go}/><SectionExpertise setView={go}/><SectionArticles setView={go}/><SectionCTA setView={go}/></>}
+        {view === "accueil"   && <><Hero setView={go}/><SectionAbout setView={go}/><SectionExpertise setView={go}/><SectionArticles setView={go}/><SectionCTA setView={go}/></>}
         {view === "expertise" && <PageExpertise />}
         {view === "projets"   && <PageProjets setView={go} />}
         {view === "articles"  && <PageArticles setView={go} />}
