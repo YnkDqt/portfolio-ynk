@@ -12,42 +12,28 @@ function useMeta() {
 const NAVS = ["expertise","projets","articles"];
 const NAVLABELS = { expertise:"Expertise", projets:"Projets", articles:"Articles" };
 
-// Ordre d'affichage : plus récent en premier
-// Numéro affiché (a.id) : ordre de publication, du plus ancien
+// id = numéro d'ordre de publication (01 = premier publié)
+// Ordre du tableau = ordre d'affichage (01 en haut → 03 en bas)
 const ARTICLES = [
   {
-    id: 3,
-    cat: "Analyse",
-    date: "10 mars 2026",
-    title: "IA et exercices de crise : simuler l'imprévisible pour mieux y résister",
-    excerpt: "La plupart des exercices de crise testent les plans dans des conditions connues, avec des équipes préparées et un calendrier fixé à l'avance. Ce n'est pas de la simulation — c'est de la répétition structurée. L'IA change cette équation.",
-    tags: ["IA","Exercices de crise","Résilience","Continuité","Simulation"],
-    intro: "En résilience opérationnelle, la qualité d'un plan de continuité d'activité ne se mesure pas à son épaisseur. Elle se mesure à sa capacité à tenir sous pression.\n\nDans la réalité, la plupart des exercices de crise souffrent d'un même défaut : ils testent le plan dans des conditions connues, avec des équipes préparées, selon un calendrier fixé à l'avance. Ce n'est pas de la simulation. C'est de la répétition structurée.\n\nEn 2026, l'intelligence artificielle change la donne : elle permet aux équipes de vivre les exercices de façon directe, avec des conséquences imprévues à leurs actions, se rapprochant des conditions de crise réelle.",
+    id: 1,
+    cat: "Rétrospective",
+    date: "6 janvier 2026",
+    title: "Résilience organisationnelle – Les enseignements clés de 2025 pour préparer 2026",
+    excerpt: "Panne électrique en Espagne, crashs Cloudflare, explosion des cyberattaques, durcissement réglementaire DORA, NIS2, CRA. Rétrospective sur les perturbations de 2025 et les apprentissages concrets à en tirer.",
+    tags: ["Résilience","DORA","NIS2","Cybersécurité","IA"],
+    intro: "Dans un contexte mondial marqué par des crises simultanées — pannes de réseau, ruptures logistiques, tensions géopolitiques et attaques numériques — la résilience organisationnelle s'impose comme une compétence stratégique essentielle. Les événements de 2025 ont révélé que la résilience ne peut plus être conçue comme un simple plan de secours : elle doit être intégrée dans l'ADN des organisations et présente dans chaque activité.\n\nVoici les enseignements concrets à retenir.",
     sections: [
-      {
-        heading: "Les limites des exercices traditionnels",
-        content: "Tester un PCA est une exigence reconnue. L'ISO 22301, référentiel de management de la continuité d'activité, recommande des exercices réguliers pour valider les plans et identifier les failles. DORA l'impose depuis 2025 pour les acteurs financiers. La bonne pratique est connue : tester au moins une fois par an.\n\nDans la réalité, ces exercices prennent le plus souvent la forme d'exercices sur table — des simulations en groupe où les participants discutent de leurs réponses à un scénario fictif, dans une salle de réunion, avec le plan sous les yeux.\n\nCes exercices ont de la valeur. Ils sensibilisent, créent une culture commune, révèlent certaines lacunes organisationnelles. Mais ils présentent des angles morts majeurs : les scénarios sont connus à l'avance ou facilement anticipables, les participants jouent le jeu dans des conditions optimales, les interactions en temps réel sont difficiles à reproduire fidèlement, et les plans sont consultés pendant l'exercice là où en situation réelle ils ne le sont souvent pas, faute de temps.\n\nPar définition, un plan de continuité ne peut être définitif. Il doit être mis à jour en fonction du contexte et des retours d'expérience — mais la mise à jour ne suffit pas si l'exercice lui-même ne permet pas de révéler les vraies failles."
-      },
-      {
-        heading: "Ce que l'IA change dans la simulation de crise",
-        content: "Les simulations assistées par l'IA permettent de reproduire fidèlement les comportements des acteurs, les interactions et la dynamique des événements, offrant une expérience immersive difficile à obtenir avec des exercices traditionnels.\n\nDes scénarios dynamiques et imprévisibles. Là où un exercice classique suit un script fixe, l'IA peut générer des scénarios évolutifs qui s'adaptent en temps réel aux décisions prises par les équipes. Une décision de communication mal calibrée peut ainsi déclencher une nouvelle séquence d'événements — comme dans une crise réelle.\n\nUne accélération du tempo. Les simulations accélérées permettent de tester en quelques heures des scénarios qui se déploieraient sur plusieurs semaines dans la réalité. Cette compression du temps est précieuse : elle permet de simuler des crises longues — rupture d'approvisionnement, crise réputationnelle, escalade géopolitique — sans mobiliser les équipes pendant des jours.\n\nUne analyse objective des performances. Les outils génèrent des tableaux de bord, mesurent les temps de réaction, identifient les goulots d'étranglement décisionnels — sans complaisance.\n\nDes simulations immersives multi-acteurs. Ces exercices sont particulièrement efficaces pour former les cellules de crise à gérer la pression médiatique et les décisions rapides, préparer les porte-parole à répondre en temps réel, et tester la coordination des équipes sur des incidents multisectoriels.\n\nDes propositions de stratégie de contournement. Une fois l'exercice terminé, l'IA peut — en se basant sur le comportement des acteurs et les meilleures pratiques du marché — proposer des stratégies adaptées, avec une vision transverse que les équipes n'ont pas toujours en interne."
-      },
-      {
-        heading: "Un exemple concret : l'ANSSI et le Sommet pour l'Action sur l'IA",
-        content: "La dimension institutionnelle de ces approches est déjà visible. Dans le contexte du Sommet pour l'Action sur l'IA de février 2025, l'ANSSI a organisé un exercice de gestion de crise en collaboration avec le Campus Cyber. L'objectif était notamment de renforcer les échanges entre les communautés de professionnels de l'IA et d'experts de la cybersécurité, afin d'identifier les mesures de gouvernance, de défense et de résilience nécessaires pour accroître la sécurité des systèmes d'IA.\n\nCe type d'exercice hybride — où l'IA est à la fois le sujet et l'outil — illustre une évolution de fond : les organisations les plus exposées intègrent déjà ces approches dans leur préparation opérationnelle."
-      },
-      {
-        heading: "Les conditions de succès",
-        content: "L'IA ne transforme pas un mauvais exercice en bon exercice. Elle amplifie la qualité de ce qui est déjà bien conçu — et révèle plus directement ce qui ne l'est pas.\n\nDes données fiables en entrée. La qualité des simulations dépend directement de la qualité des données disponibles : cartographie des activités critiques, inventaire des dépendances, historique des incidents. Un BIA solide reste le prérequis indispensable.\n\nUne gouvernance claire de l'outil. La supervision humaine reste essentielle. Déléguer la conception des scénarios à l'IA sans cadre de validation expose à des simulations déconnectées du contexte réel de l'organisation.\n\nUne intégration dans une démarche continue. Un exercice IA isolé n'a pas plus de valeur qu'un exercice tabletop isolé. C'est la capacité à itérer rapidement — intégrer les retours d'expérience, faire évoluer les scénarios — qui en fait un levier durable, pas un événement ponctuel.\n\nNe pas confondre simulation et résilience. Simuler mieux ne signifie pas être plus résilient. L'exercice, aussi sophistiqué soit-il, ne vaut que si ses enseignements sont traduits en décisions concrètes : mise à jour des plans, ajustement des seuils de déclenchement, renforcement des alternatives identifiées comme fragiles."
-      },
-      {
-        heading: "Conclusion",
-        content: "Les organisations qui testent leurs plans dans des conditions trop confortables créent une illusion de préparation. La crise réelle n'annonce pas son scénario, ne prévient pas de son timing, et ne laisse pas le temps de consulter le plan page par page.\n\nL'IA ne supprime pas l'imprévu. Mais elle permet de s'y confronter de manière plus réaliste, plus fréquente et plus instructive que les approches traditionnelles. Elle rend les exercices moins confortables — et c'est précisément là sa valeur.\n\nCe qui distingue les organisations véritablement résilientes, ce n'est pas la qualité de leur documentation. C'est leur capacité à apprendre vite, à ajuster en continu, et à transformer chaque simulation — même imparfaite — en décision opérationnelle concrète.\n\nUn plan qui n'a jamais été mis sous pression réelle n'est qu'une hypothèse. L'IA offre aujourd'hui les moyens de le tester autrement — plus souvent, plus profondément, plus honnêtement."
-      },
+      { heading: "Continuité des activités : préparer l'inattendu", content: "En avril 2025, une panne géante d'électricité a plongé l'Espagne et le Portugal dans le noir pendant plusieurs heures, paralysant les télécommunications, les transports et de nombreux services essentiels. Cette crise a mis en lumière la fragilité des infrastructures critiques face à des événements en cascade.\n\nFin 2025, Cloudflare a connu plusieurs interruptions majeures affectant jusqu'à 28 % du trafic mondial. Ces incidents rappellent que la dépendance à des services tiers, même robustes, nécessite une planification proactive de la redondance et des scénarios de basculement.\n\nLa crise climatique et les fortes chaleurs de l'été ont également montré leurs effets sur la continuité : les canicules remettent en question la capacité des systèmes industriels et services publics à fonctionner en dehors des plages de températures prévues.\n\nDans ce contexte, il est primordial de connaître ses activités critiques, d'avoir défini des délais maximums d'interruption acceptables (RTO/RPO), de lister les dépendances clés et de se préparer à leur défaillance." },
+      { heading: "Gestion des tiers et fournisseurs : une stratégie de contournement plus qu'un contrat", content: "Les tensions géopolitiques et commerciales continuent de peser sur les chaînes d'approvisionnement mondiales. Les conflits, les hausses de droits de douane et la dépendance à des acteurs uniques — comme la Chine pour les terres rares — créent des vulnérabilités qui peuvent bloquer l'ensemble de la chaîne de distribution.\n\nEn France, début 2025, une pénurie de médicaments a illustré concrètement cette fragilité : la production de principes actifs dépendait jusqu'à 80 % de l'Inde et de la Chine.\n\nPour sécuriser ses activités, il devient essentiel de cartographier les dépendances critiques, de diversifier les sources d'approvisionnement et de développer des stratégies de proximité, de stockage stratégique, voire d'autonomie locale." },
+      { heading: "Technologies : opportunités et menaces", content: "La cybersécurité est au cœur de la résilience technologique. Les volumes d'incidents cybercriminels continuent d'augmenter, ciblant notamment les secteurs critiques (santé, énergie, transports). Les attaques sont de plus en plus menées par des « hacktivistes » soutenant des États.\n\nL'intelligence artificielle, sans doute le sujet clé de 2025, joue un rôle ambivalent. Elle constitue à la fois un facteur d'amplification des risques (phishing ciblé, deepfakes, attaques automatisées) et un levier majeur de robustesse (veille informationnelle, détection d'anomalies, simulation de scénarios de crise).\n\nL'enjeu n'est pas l'IA en elle-même, mais sa gouvernance : intégrée dans une stratégie de résilience globale, elle peut transformer une menace potentielle en avantage stratégique." },
+      { heading: "Ressources humaines : anticiper la guerre des talents", content: "L'un des défis les plus récents est la « guerre des talents », notamment dans les domaines technologiques avancés. La pénurie de profils spécialisés conduit à des stratégies d'attraction agressives — Meta a offert 1,5 milliard de dollars sur six ans pour recruter l'un des plus grands talents en IA.\n\nPour rester compétitives et résilientes, les organisations doivent investir dans la gestion prévisionnelle des emplois et des compétences (GPEC), la formation continue et la fidélisation des talents clés. Cela réduit les risques de rupture opérationnelle liés à un déficit de compétences." },
+      { heading: "Légal et juridique : conformité et responsabilité accrues", content: "L'environnement réglementaire a évolué rapidement en 2025, avec trois textes majeurs qui structurent la résilience numérique en Europe :\n\nDORA (Digital Operational Resilience Act) renforce la résilience opérationnelle dans le secteur financier. La directive NIS2 élargit les obligations de gestion des risques cyber dans l'UE. Le Cyber Resilience Act (CRA) oblige les fabricants à intégrer des exigences de sécurité dans les produits numériques.\n\nEn France, la réforme 2025 de la protection des données introduit de nouvelles obligations pour les grandes organisations. Les décisions judiciaires récentes confirment par ailleurs la responsabilité personnelle des dirigeants en cas de négligence dans la gestion des risques.\n\nPour rester conformes, les organisations doivent adopter une culture de résilience globale, avec une gouvernance claire et une exigence de sécurité dès la conception." },
+      { heading: "Conclusion : vers une résilience globale", content: "Les crises de 2025 confirment que la résilience ne se limite pas à un plan de reprise d'activité ou à la cybersécurité. Elle nécessite une approche globale, intégrant les dimensions humaines, technologiques, environnementales, juridiques et géopolitiques.\n\nPour 2026, les organisations les plus robustes seront celles qui adoptent une vision globale dépassant les silos, construisent leur résilience dès la conception, anticipent grâce à des exercices réguliers, collaborent avec des partenaires publics et privés, et restent agiles face aux chocs externes." },
     ]
   },
   {
-    id: 1,
+    id: 2,
     cat: "Analyse",
     date: "2 février 2026",
     title: "Géopolitique et résilience – Intégrer l'instabilité dans les choix structurels",
@@ -66,20 +52,19 @@ const ARTICLES = [
     ]
   },
   {
-    id: 2,
-    cat: "Rétrospective",
-    date: "6 janvier 2026",
-    title: "Résilience organisationnelle – Les enseignements clés de 2025 pour préparer 2026",
-    excerpt: "Panne électrique en Espagne, crashs Cloudflare, explosion des cyberattaques, durcissement réglementaire DORA, NIS2, CRA. Rétrospective sur les perturbations de 2025 et les apprentissages concrets à en tirer.",
-    tags: ["Résilience","DORA","NIS2","Cybersécurité","IA"],
-    intro: "Dans un contexte mondial marqué par des crises simultanées — pannes de réseau, ruptures logistiques, tensions géopolitiques et attaques numériques — la résilience organisationnelle s'impose comme une compétence stratégique essentielle. Les événements de 2025 ont révélé que la résilience ne peut plus être conçue comme un simple plan de secours : elle doit être intégrée dans l'ADN des organisations et présente dans chaque activité.\n\nVoici les enseignements concrets à retenir.",
+    id: 3,
+    cat: "Analyse",
+    date: "10 mars 2026",
+    title: "IA et exercices de crise : simuler l'imprévisible pour mieux y résister",
+    excerpt: "La plupart des exercices de crise testent les plans dans des conditions connues, avec des équipes préparées et un calendrier fixé à l'avance. Ce n'est pas de la simulation — c'est de la répétition structurée. L'IA change cette équation.",
+    tags: ["IA","Exercices de crise","Résilience","Continuité","Simulation"],
+    intro: "En résilience opérationnelle, la qualité d'un plan de continuité d'activité ne se mesure pas à son épaisseur. Elle se mesure à sa capacité à tenir sous pression.\n\nDans la réalité, la plupart des exercices de crise souffrent d'un même défaut : ils testent le plan dans des conditions connues, avec des équipes préparées, selon un calendrier fixé à l'avance. Ce n'est pas de la simulation. C'est de la répétition structurée.\n\nEn 2026, l'intelligence artificielle change la donne : elle permet aux équipes de vivre les exercices de façon directe, avec des conséquences imprévues à leurs actions, se rapprochant des conditions de crise réelle.",
     sections: [
-      { heading: "Continuité des activités : préparer l'inattendu", content: "En avril 2025, une panne géante d'électricité a plongé l'Espagne et le Portugal dans le noir pendant plusieurs heures, paralysant les télécommunications, les transports et de nombreux services essentiels. Cette crise a mis en lumière la fragilité des infrastructures critiques face à des événements en cascade.\n\nFin 2025, Cloudflare a connu plusieurs interruptions majeures affectant jusqu'à 28 % du trafic mondial. Ces incidents rappellent que la dépendance à des services tiers, même robustes, nécessite une planification proactive de la redondance et des scénarios de basculement.\n\nLa crise climatique et les fortes chaleurs de l'été ont également montré leurs effets sur la continuité : les canicules remettent en question la capacité des systèmes industriels et services publics à fonctionner en dehors des plages de températures prévues.\n\nDans ce contexte, il est primordial de connaître ses activités critiques, d'avoir défini des délais maximums d'interruption acceptables (RTO/RPO), de lister les dépendances clés et de se préparer à leur défaillance." },
-      { heading: "Gestion des tiers et fournisseurs : une stratégie de contournement plus qu'un contrat", content: "Les tensions géopolitiques et commerciales continuent de peser sur les chaînes d'approvisionnement mondiales. Les conflits, les hausses de droits de douane et la dépendance à des acteurs uniques — comme la Chine pour les terres rares — créent des vulnérabilités qui peuvent bloquer l'ensemble de la chaîne de distribution.\n\nEn France, début 2025, une pénurie de médicaments a illustré concrètement cette fragilité : la production de principes actifs dépendait jusqu'à 80 % de l'Inde et de la Chine.\n\nPour sécuriser ses activités, il devient essentiel de cartographier les dépendances critiques, de diversifier les sources d'approvisionnement et de développer des stratégies de proximité, de stockage stratégique, voire d'autonomie locale." },
-      { heading: "Technologies : opportunités et menaces", content: "La cybersécurité est au cœur de la résilience technologique. Les volumes d'incidents cybercriminels continuent d'augmenter, ciblant notamment les secteurs critiques (santé, énergie, transports). Les attaques sont de plus en plus menées par des « hacktivistes » soutenant des États.\n\nL'intelligence artificielle, sans doute le sujet clé de 2025, joue un rôle ambivalent. Elle constitue à la fois un facteur d'amplification des risques (phishing ciblé, deepfakes, attaques automatisées) et un levier majeur de robustesse (veille informationnelle, détection d'anomalies, simulation de scénarios de crise).\n\nL'enjeu n'est pas l'IA en elle-même, mais sa gouvernance : intégrée dans une stratégie de résilience globale, elle peut transformer une menace potentielle en avantage stratégique." },
-      { heading: "Ressources humaines : anticiper la guerre des talents", content: "L'un des défis les plus récents est la « guerre des talents », notamment dans les domaines technologiques avancés. La pénurie de profils spécialisés conduit à des stratégies d'attraction agressives — Meta a offert 1,5 milliard de dollars sur six ans pour recruter l'un des plus grands talents en IA.\n\nPour rester compétitives et résilientes, les organisations doivent investir dans la gestion prévisionnelle des emplois et des compétences (GPEC), la formation continue et la fidélisation des talents clés. Cela réduit les risques de rupture opérationnelle liés à un déficit de compétences." },
-      { heading: "Légal et juridique : conformité et responsabilité accrues", content: "L'environnement réglementaire a évolué rapidement en 2025, avec trois textes majeurs qui structurent la résilience numérique en Europe :\n\nDORA (Digital Operational Resilience Act) renforce la résilience opérationnelle dans le secteur financier. La directive NIS2 élargit les obligations de gestion des risques cyber dans l'UE. Le Cyber Resilience Act (CRA) oblige les fabricants à intégrer des exigences de sécurité dans les produits numériques.\n\nEn France, la réforme 2025 de la protection des données introduit de nouvelles obligations pour les grandes organisations. Les décisions judiciaires récentes confirment par ailleurs la responsabilité personnelle des dirigeants en cas de négligence dans la gestion des risques.\n\nPour rester conformes, les organisations doivent adopter une culture de résilience globale, avec une gouvernance claire et une exigence de sécurité dès la conception." },
-      { heading: "Conclusion : vers une résilience globale", content: "Les crises de 2025 confirment que la résilience ne se limite pas à un plan de reprise d'activité ou à la cybersécurité. Elle nécessite une approche globale, intégrant les dimensions humaines, technologiques, environnementales, juridiques et géopolitiques.\n\nPour 2026, les organisations les plus robustes seront celles qui adoptent une vision globale dépassant les silos, construisent leur résilience dès la conception, anticipent grâce à des exercices réguliers, collaborent avec des partenaires publics et privés, et restent agiles face aux chocs externes." },
+      { heading: "Les limites des exercices traditionnels", content: "Tester un PCA est une exigence reconnue. L'ISO 22301, référentiel de management de la continuité d'activité, recommande des exercices réguliers pour valider les plans et identifier les failles. DORA l'impose depuis 2025 pour les acteurs financiers. La bonne pratique est connue : tester au moins une fois par an.\n\nDans la réalité, ces exercices prennent le plus souvent la forme d'exercices sur table — des simulations en groupe où les participants discutent de leurs réponses à un scénario fictif, dans une salle de réunion, avec le plan sous les yeux.\n\nCes exercices ont de la valeur. Ils sensibilisent, créent une culture commune, révèlent certaines lacunes organisationnelles. Mais ils présentent des angles morts majeurs : les scénarios sont connus à l'avance ou facilement anticipables, les participants jouent le jeu dans des conditions optimales, les interactions en temps réel sont difficiles à reproduire fidèlement, et les plans sont consultés pendant l'exercice là où en situation réelle ils ne le sont souvent pas, faute de temps.\n\nPar définition, un plan de continuité ne peut être définitif. Il doit être mis à jour en fonction du contexte et des retours d'expérience — mais la mise à jour ne suffit pas si l'exercice lui-même ne permet pas de révéler les vraies failles." },
+      { heading: "Ce que l'IA change dans la simulation de crise", content: "Les simulations assistées par l'IA permettent de reproduire fidèlement les comportements des acteurs, les interactions et la dynamique des événements, offrant une expérience immersive difficile à obtenir avec des exercices traditionnels.\n\nDes scénarios dynamiques et imprévisibles. Là où un exercice classique suit un script fixe, l'IA peut générer des scénarios évolutifs qui s'adaptent en temps réel aux décisions prises par les équipes. Une décision de communication mal calibrée peut ainsi déclencher une nouvelle séquence d'événements — comme dans une crise réelle.\n\nUne accélération du tempo. Les simulations accélérées permettent de tester en quelques heures des scénarios qui se déploieraient sur plusieurs semaines dans la réalité. Cette compression du temps est précieuse : elle permet de simuler des crises longues — rupture d'approvisionnement, crise réputationnelle, escalade géopolitique — sans mobiliser les équipes pendant des jours.\n\nUne analyse objective des performances. Les outils génèrent des tableaux de bord, mesurent les temps de réaction, identifient les goulots d'étranglement décisionnels — sans complaisance.\n\nDes simulations immersives multi-acteurs. Ces exercices sont particulièrement efficaces pour former les cellules de crise à gérer la pression médiatique et les décisions rapides, préparer les porte-parole à répondre en temps réel, et tester la coordination des équipes sur des incidents multisectoriels.\n\nDes propositions de stratégie de contournement. Une fois l'exercice terminé, l'IA peut — en se basant sur le comportement des acteurs et les meilleures pratiques du marché — proposer des stratégies adaptées, avec une vision transverse que les équipes n'ont pas toujours en interne." },
+      { heading: "Un exemple concret : l'ANSSI et le Sommet pour l'Action sur l'IA", content: "La dimension institutionnelle de ces approches est déjà visible. Dans le contexte du Sommet pour l'Action sur l'IA de février 2025, l'ANSSI a organisé un exercice de gestion de crise en collaboration avec le Campus Cyber. L'objectif était notamment de renforcer les échanges entre les communautés de professionnels de l'IA et d'experts de la cybersécurité, afin d'identifier les mesures de gouvernance, de défense et de résilience nécessaires pour accroître la sécurité des systèmes d'IA.\n\nCe type d'exercice hybride — où l'IA est à la fois le sujet et l'outil — illustre une évolution de fond : les organisations les plus exposées intègrent déjà ces approches dans leur préparation opérationnelle." },
+      { heading: "Les conditions de succès", content: "L'IA ne transforme pas un mauvais exercice en bon exercice. Elle amplifie la qualité de ce qui est déjà bien conçu — et révèle plus directement ce qui ne l'est pas.\n\nDes données fiables en entrée. La qualité des simulations dépend directement de la qualité des données disponibles : cartographie des activités critiques, inventaire des dépendances, historique des incidents. Un BIA solide reste le prérequis indispensable.\n\nUne gouvernance claire de l'outil. La supervision humaine reste essentielle. Déléguer la conception des scénarios à l'IA sans cadre de validation expose à des simulations déconnectées du contexte réel de l'organisation.\n\nUne intégration dans une démarche continue. Un exercice IA isolé n'a pas plus de valeur qu'un exercice tabletop isolé. C'est la capacité à itérer rapidement — intégrer les retours d'expérience, faire évoluer les scénarios — qui en fait un levier durable, pas un événement ponctuel.\n\nNe pas confondre simulation et résilience. Simuler mieux ne signifie pas être plus résilient. L'exercice, aussi sophistiqué soit-il, ne vaut que si ses enseignements sont traduits en décisions concrètes : mise à jour des plans, ajustement des seuils de déclenchement, renforcement des alternatives identifiées comme fragiles." },
+      { heading: "Conclusion", content: "Les organisations qui testent leurs plans dans des conditions trop confortables créent une illusion de préparation. La crise réelle n'annonce pas son scénario, ne prévient pas de son timing, et ne laisse pas le temps de consulter le plan page par page.\n\nL'IA ne supprime pas l'imprévu. Mais elle permet de s'y confronter de manière plus réaliste, plus fréquente et plus instructive que les approches traditionnelles. Elle rend les exercices moins confortables — et c'est précisément là sa valeur.\n\nCe qui distingue les organisations véritablement résilientes, ce n'est pas la qualité de leur documentation. C'est leur capacité à apprendre vite, à ajuster en continu, et à transformer chaque simulation — même imparfaite — en décision opérationnelle concrète.\n\nUn plan qui n'a jamais été mis sous pression réelle n'est qu'une hypothèse. L'IA offre aujourd'hui les moyens de le tester autrement — plus souvent, plus profondément, plus honnêtement." },
     ]
   }
 ];
@@ -206,31 +191,22 @@ const G = `
 `;
 
 function Ey({ children, light, style }) {
-  return <div style={{ fontSize:12, letterSpacing:"0.18em", textTransform:"uppercase", fontWeight:500,
-    color:light?"rgba(255,255,255,0.35)":"#b85c35", display:"flex", alignItems:"center", gap:8, ...style }}>{children}</div>;
+  return <div style={{ fontSize:12, letterSpacing:"0.18em", textTransform:"uppercase", fontWeight:500, color:light?"rgba(255,255,255,0.35)":"#b85c35", display:"flex", alignItems:"center", gap:8, ...style }}>{children}</div>;
 }
 function Btn({ children, onClick, href, outline, style, sm }) {
-  const base = { display:"inline-flex", alignItems:"center", gap:6,
-    padding:sm?"11px 22px":"13px 28px", borderRadius:24, cursor:"pointer",
-    fontFamily:"'DM Sans',sans-serif", fontSize:sm?14:16, fontWeight:500,
-    letterSpacing:"0.02em", textDecoration:"none", whiteSpace:"nowrap", transition:"all .2s",
-    background:outline?"transparent":"#b85c35", color:outline?"#b85c35":"#fff",
-    border:outline?"1.5px solid #b85c35":"none", ...style };
+  const base = { display:"inline-flex", alignItems:"center", gap:6, padding:sm?"11px 22px":"13px 28px", borderRadius:24, cursor:"pointer", fontFamily:"'DM Sans',sans-serif", fontSize:sm?14:16, fontWeight:500, letterSpacing:"0.02em", textDecoration:"none", whiteSpace:"nowrap", transition:"all .2s", background:outline?"transparent":"#b85c35", color:outline?"#b85c35":"#fff", border:outline?"1.5px solid #b85c35":"none", ...style };
   if (href) return <a href={href} target="_blank" rel="noopener noreferrer" style={base}>{children}</a>;
   return <button onClick={onClick} style={base}>{children}</button>;
 }
 function Tag({ children, dark }) {
-  return <span style={{ padding:"5px 12px", borderRadius:3, fontSize:12, fontWeight:500,
-    background:dark?"rgba(255,255,255,0.08)":"#fdf0ec", color:dark?"rgba(255,255,255,0.6)":"#b85c35" }}>{children}</span>;
+  return <span style={{ padding:"5px 12px", borderRadius:3, fontSize:12, fontWeight:500, background:dark?"rgba(255,255,255,0.08)":"#fdf0ec", color:dark?"rgba(255,255,255,0.6)":"#b85c35" }}>{children}</span>;
 }
 function Card({ children, style, className, onClick }) {
   return <div className={className} onClick={onClick} style={{ background:"#fff", border:"1px solid #ecddd0", borderRadius:8, padding:32, ...style }}>{children}</div>;
 }
 function BackBtn({ onClick, label }) {
   return (
-    <button onClick={onClick} style={{ background:"none", border:"none", cursor:"pointer",
-      display:"flex", alignItems:"center", gap:8, fontSize:14, color:"rgba(255,255,255,.4)",
-      fontFamily:"'DM Sans',sans-serif", padding:0, marginBottom:32, transition:"color .18s" }}
+    <button onClick={onClick} style={{ background:"none", border:"none", cursor:"pointer", display:"flex", alignItems:"center", gap:8, fontSize:14, color:"rgba(255,255,255,.4)", fontFamily:"'DM Sans',sans-serif", padding:0, marginBottom:32, transition:"color .18s" }}
       onMouseEnter={e => e.currentTarget.style.color="#b85c35"}
       onMouseLeave={e => e.currentTarget.style.color="rgba(255,255,255,.4)"}>
       ← {label}
@@ -250,43 +226,28 @@ function Nav({ view, setView }) {
   const active = n => view === n || view.startsWith(n.replace(/s$/,"") + "-");
   return (
     <>
-      <nav style={{ position:"fixed", top:0, left:0, right:0, zIndex:200,
-        background:sc?"rgba(253,248,243,.96)":"transparent",
-        borderBottom:sc?"1px solid #ecddd0":"none",
-        backdropFilter:sc?"blur(14px)":"none", transition:"all .3s" }}>
-        <div style={{ maxWidth:1180, margin:"0 auto", padding:"0 40px", height:72,
-          display:"flex", alignItems:"center", justifyContent:"space-between" }}>
+      <nav style={{ position:"fixed", top:0, left:0, right:0, zIndex:200, background:sc?"rgba(253,248,243,.96)":"transparent", borderBottom:sc?"1px solid #ecddd0":"none", backdropFilter:sc?"blur(14px)":"none", transition:"all .3s" }}>
+        <div style={{ maxWidth:1180, margin:"0 auto", padding:"0 40px", height:72, display:"flex", alignItems:"center", justifyContent:"space-between" }}>
           <div onClick={() => go("accueil")} style={{ cursor:"pointer", display:"flex", alignItems:"center", gap:10 }}>
             <div style={{ width:9, height:9, borderRadius:"50%", background:"#b85c35" }} />
             <span style={{ fontFamily:"'Fraunces',serif", fontSize:21, fontWeight:400, color:"#2a1810" }}>Yannick Dequant</span>
           </div>
           <div className="mh" style={{ display:"flex", alignItems:"center", gap:32 }}>
             {NAVS.map(n => (
-              <span key={n} onClick={() => go(n)} className="lc"
-                style={{ fontSize:16, cursor:"pointer", transition:"color .18s",
-                  color:active(n)?"#b85c35":"#6b5040", fontWeight:active(n)?500:400 }}>
-                {NAVLABELS[n]}
-              </span>
+              <span key={n} onClick={() => go(n)} className="lc" style={{ fontSize:16, cursor:"pointer", transition:"color .18s", color:active(n)?"#b85c35":"#6b5040", fontWeight:active(n)?500:400 }}>{NAVLABELS[n]}</span>
             ))}
             <Btn onClick={() => go("contact")} sm>Me contacter</Btn>
           </div>
-          <button onClick={() => setOp(!op)} className="mbg"
-            style={{ background:"none", border:"none", cursor:"pointer", flexDirection:"column", gap:5, padding:4, display:"none" }}>
+          <button onClick={() => setOp(!op)} className="mbg" style={{ background:"none", border:"none", cursor:"pointer", flexDirection:"column", gap:5, padding:4, display:"none" }}>
             {[0,1,2].map(i => (
-              <div key={i} style={{ width:24, height:2, background:"#2a1810", transition:"all .22s",
-                transform:op?(i===0?"rotate(45deg) translate(4.5px,4.5px)":i===2?"rotate(-45deg) translate(4.5px,-4.5px)":"scaleX(0)"):"none",
-                opacity:op&&i===1?0:1 }} />
+              <div key={i} style={{ width:24, height:2, background:"#2a1810", transition:"all .22s", transform:op?(i===0?"rotate(45deg) translate(4.5px,4.5px)":i===2?"rotate(-45deg) translate(4.5px,-4.5px)":"scaleX(0)"):"none", opacity:op&&i===1?0:1 }} />
             ))}
           </button>
         </div>
       </nav>
-      <div style={{ position:"fixed", top:72, left:0, right:0, bottom:0, zIndex:199,
-        background:"#faf5ee", padding:"40px", display:"flex", flexDirection:"column",
-        transform:op?"translateX(0)":"translateX(100%)", transition:"transform .28s ease" }}>
+      <div style={{ position:"fixed", top:72, left:0, right:0, bottom:0, zIndex:199, background:"#faf5ee", padding:"40px", display:"flex", flexDirection:"column", transform:op?"translateX(0)":"translateX(100%)", transition:"transform .28s ease" }}>
         {["accueil",...NAVS].map(n => (
-          <div key={n} onClick={() => go(n)} style={{ padding:"22px 0", borderBottom:"1px solid #ecddd0",
-            fontFamily:"'Fraunces',serif", fontSize:34, fontWeight:300,
-            color:active(n)?"#b85c35":"#2a1810", cursor:"pointer" }}>
+          <div key={n} onClick={() => go(n)} style={{ padding:"22px 0", borderBottom:"1px solid #ecddd0", fontFamily:"'Fraunces',serif", fontSize:34, fontWeight:300, color:active(n)?"#b85c35":"#2a1810", cursor:"pointer" }}>
             {n==="accueil"?"Accueil":NAVLABELS[n]}
           </div>
         ))}
@@ -298,6 +259,8 @@ function Nav({ view, setView }) {
 }
 
 function Hero({ setView }) {
+  // Hero sidebar shows articles in reverse order (most recent first)
+  const heroArticles = [...ARTICLES].reverse();
   return (
     <section style={{ minHeight:"100vh", display:"flex", flexDirection:"column", justifyContent:"center", paddingTop:72, background:"#fdf8f3" }}>
       <div style={{ maxWidth:1180, margin:"0 auto", padding:"64px 40px 40px", width:"100%" }}>
@@ -326,10 +289,9 @@ function Hero({ setView }) {
           </div>
           <div className="au d3" style={{ display:"flex", flexDirection:"column", gap:12, paddingTop:6 }}>
             <div style={{ fontSize:12, color:"#b0987e", letterSpacing:"0.16em", textTransform:"uppercase", marginBottom:4 }}>Dernières analyses</div>
-            {ARTICLES.map((a,i) => (
+            {heroArticles.map((a,i) => (
               <div key={a.id} onClick={() => setView(`article-${a.id}`)} className="hl"
-                style={{ background:i===0?"#b85c35":"#fff", border:`1px solid ${i===0?"#b85c35":"#ecddd0"}`,
-                  borderRadius:7, padding:"16px 18px", cursor:"pointer", boxShadow:"0 1px 6px rgba(80,40,20,.06)" }}>
+                style={{ background:i===0?"#b85c35":"#fff", border:`1px solid ${i===0?"#b85c35":"#ecddd0"}`, borderRadius:7, padding:"16px 18px", cursor:"pointer", boxShadow:"0 1px 6px rgba(80,40,20,.06)" }}>
                 <div style={{ fontSize:11, textTransform:"uppercase", letterSpacing:"0.12em", marginBottom:7, color:i===0?"rgba(255,255,255,.55)":"#b0987e" }}>{a.cat}</div>
                 <div style={{ fontFamily:"'Fraunces',serif", fontSize:17, lineHeight:1.35, marginBottom:7, color:i===0?"#fff":"#2a1810" }}>{a.title}</div>
                 <div style={{ fontSize:13, color:i===0?"rgba(255,255,255,.45)":"#c8b5a0" }}>{a.date}</div>
@@ -432,6 +394,8 @@ function SectionExpertise({ setView }) {
 }
 
 function SectionArticles({ setView }) {
+  // Section homepage shows most recent first
+  const displayed = [...ARTICLES].reverse();
   return (
     <section style={{ background:"#2a1810", padding:"110px 40px" }}>
       <div style={{ maxWidth:1180, margin:"0 auto" }}>
@@ -442,7 +406,7 @@ function SectionArticles({ setView }) {
           </div>
           <Btn onClick={() => setView("articles")}>Tous les articles →</Btn>
         </div>
-        {ARTICLES.map((a) => (
+        {displayed.map((a) => (
           <div key={a.id} onClick={() => setView(`article-${a.id}`)} style={{ display:"grid", gridTemplateColumns:"90px 1fr 36px", gap:32, padding:"32px 0", borderBottom:"1px solid rgba(255,255,255,.07)", cursor:"pointer", alignItems:"center", transition:"padding-left .2s" }}
             onMouseEnter={e => e.currentTarget.style.paddingLeft="12px"}
             onMouseLeave={e => e.currentTarget.style.paddingLeft="0"}>
@@ -492,9 +456,7 @@ function PageExpertise() {
       <section style={{ background:"#2a1810", padding:"90px 40px 80px" }}>
         <div style={{ maxWidth:1180, margin:"0 auto" }}>
           <Ey light style={{ marginBottom:22 }}>Expertise</Ey>
-          <h1 style={{ fontFamily:"'Fraunces',serif", fontSize:"clamp(44px,6vw,80px)", fontWeight:300, color:"#f0e8dc", lineHeight:1.05, marginBottom:24 }}>
-            Domaines<br/><em style={{ fontStyle:"italic", color:"rgba(240,232,220,.4)" }}>d'intervention</em>
-          </h1>
+          <h1 style={{ fontFamily:"'Fraunces',serif", fontSize:"clamp(44px,6vw,80px)", fontWeight:300, color:"#f0e8dc", lineHeight:1.05, marginBottom:24 }}>Domaines<br/><em style={{ fontStyle:"italic", color:"rgba(240,232,220,.4)" }}>d'intervention</em></h1>
           <p style={{ fontSize:19, color:"rgba(255,255,255,.38)", maxWidth:520, lineHeight:1.85 }}>Une approche globale de la résilience — de l'analyse des dépendances critiques à la gouvernance opérationnelle.</p>
         </div>
       </section>
@@ -531,8 +493,8 @@ function PageProjets({ setView }) {
         <div style={{ maxWidth:1180, margin:"0 auto" }}>
           <div style={{ marginBottom:72 }}>
             <div style={{ fontSize:12, color:"#b0987e", letterSpacing:"0.14em", textTransform:"uppercase", marginBottom:22 }}>Projet principal en cours</div>
-            <div onClick={() => setView(`projet-${featured.id}`)} className="hl"
-              style={{ background:"#2a1810", borderRadius:8, padding:"52px", display:"grid", gridTemplateColumns:"1fr 1fr", gap:52, cursor:"pointer" }} className="m1 mp">
+            <div onClick={() => setView(`projet-${featured.id}`)} className="hl mp m1"
+              style={{ background:"#2a1810", borderRadius:8, padding:"52px", display:"grid", gridTemplateColumns:"1fr 1fr", gap:52, cursor:"pointer" }}>
               <div>
                 <div style={{ fontSize:12, color:"#b85c35", letterSpacing:"0.12em", textTransform:"uppercase", marginBottom:18 }}>{featured.period} · {featured.org}</div>
                 <h2 style={{ fontFamily:"'Fraunces',serif", fontSize:"clamp(26px,3vw,36px)", fontWeight:300, color:"#f0e8dc", lineHeight:1.2, marginBottom:26 }}>{featured.title}</h2>
@@ -553,8 +515,7 @@ function PageProjets({ setView }) {
           <div style={{ fontSize:12, color:"#b0987e", letterSpacing:"0.14em", textTransform:"uppercase", marginBottom:26 }}>Autres projets</div>
           <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit,minmax(300px,1fr))", gap:20 }}>
             {autres.map(p => (
-              <Card key={p.id} className="hl" onClick={() => setView(`projet-${p.id}`)}
-                style={{ display:"flex", flexDirection:"column", padding:"30px", cursor:"pointer" }}>
+              <Card key={p.id} className="hl" onClick={() => setView(`projet-${p.id}`)} style={{ display:"flex", flexDirection:"column", padding:"30px", cursor:"pointer" }}>
                 <div style={{ fontSize:13, color:"#b0987e", marginBottom:10 }}>{p.period} · {p.org}</div>
                 <div style={{ fontFamily:"'Fraunces',serif", fontSize:21, fontWeight:400, color:"#2a1810", marginBottom:14, lineHeight:1.3, flex:1 }}>{p.title}</div>
                 <p style={{ fontSize:15, color:"#6b5040", lineHeight:1.85, marginBottom:20 }}>{p.shortDesc}</p>
@@ -629,7 +590,7 @@ function PageArticles({ setView }) {
       <section style={{ padding:"80px 40px" }}>
         <div style={{ maxWidth:940, margin:"0 auto" }}>
           <div style={{ display:"flex", flexDirection:"column", gap:26 }}>
-            {ARTICLES.map((a) => (
+            {[...ARTICLES].reverse().map((a) => (
               <div key={a.id} onClick={() => setView(`article-${a.id}`)} className="hl"
                 style={{ display:"grid", gridTemplateColumns:"110px 1fr", gap:40, background:"#fff", border:"1px solid #ecddd0", borderRadius:8, padding:"42px", cursor:"pointer" }}>
                 <div>
@@ -748,8 +709,7 @@ function Footer({ setView }) {
         <div style={{ fontFamily:"'Fraunces',serif", fontSize:17, fontWeight:300, color:"rgba(255,255,255,.3)" }}>Yannick Dequant</div>
         <div style={{ display:"flex", gap:28, flexWrap:"wrap" }}>
           {NAVS.map(n => (
-            <span key={n} onClick={() => go(n)} className="lc"
-              style={{ fontSize:14, color:"rgba(255,255,255,.22)", cursor:"pointer", transition:"color .18s" }}
+            <span key={n} onClick={() => go(n)} className="lc" style={{ fontSize:14, color:"rgba(255,255,255,.22)", cursor:"pointer", transition:"color .18s" }}
               onMouseEnter={e => e.target.style.color="rgba(255,255,255,.6)"}
               onMouseLeave={e => e.target.style.color="rgba(255,255,255,.22)"}>
               {NAVLABELS[n]}
