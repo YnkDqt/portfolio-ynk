@@ -383,9 +383,9 @@ function Hero({ setView }) {
 
 function SectionAbout({ setView }) {
   const parc = [
-    { period:"Mai 2025 →", org:"Indépendant — Portage salarial", role:"Business Analyst Senior · Résilience", cur:true },
-    { period:"Juil. 2023 – Mai 2025", org:"CGI Montréal", role:"Business Analyst Senior · Mission CDPQ" },
-    { period:"2019–2023", org:"CGI Paris & Montréal", role:"Consultant Business Analyst" },
+    { period:"Mai 2025 →", org:"Indépendant — Portage salarial", role:"Business Analyst Senior", cur:true },
+    { period:"2022–2025", org:"CGI Montréal", role:"Business Analyst Senior" },
+    { period:"2019–2022", org:"CGI Paris", role:"Consultant SIRH" },
   ];
   return (
     <section style={{ background:"#faf5ee", padding:"110px 40px" }}>
@@ -754,7 +754,6 @@ function PageContact() {
             {[
               { label:"Statut", val:"Indépendant — Portage salarial" },
               { label:"Type de missions", val:"Longue durée privilégiée" },
-              { label:"Secteurs cibles", val:"Finance, investissement institutionnel, grandes organisations" },
             ].map((d,i,arr) => (
               <div key={d.label} style={{ padding:"17px 0", borderBottom:i<arr.length-1?"1px solid #ecddd0":"none" }}>
                 <div style={{ fontSize:12, color:"#b0987e", letterSpacing:"0.08em", textTransform:"uppercase", marginBottom:7 }}>{d.label}</div>
