@@ -349,7 +349,7 @@ function Hero({ setView }) {
               <Btn outline onClick={() => setView("contact")}>Me contacter</Btn>
             </div>
             <div className="au d4" style={{ display:"flex", gap:44, marginTop:56, paddingTop:32, borderTop:"1px solid #ecddd0" }}>
-              {[["7+","Ans d'expérience"],["CBCI","Certifié · The BCI"],["CDPQ","Mission en cours"],["22301","ISO maîtrisé"]].map(([v,l]) => (
+              {[["7+","Ans d'expérience"],["CDPQ","Mission en cours"],["CBCI","Certifié · The BCI"],["22301","ISO maîtrisé"]].map(([v,l]) => (
                 <div key={l}>
                   <div style={{ fontFamily:"'Fraunces',serif", fontSize:30, fontWeight:400, color:"#2a1810", lineHeight:1, marginBottom:7 }}>{v}</div>
                   <div style={{ fontSize:13, color:"#b0987e" }}>{l}</div>
@@ -383,9 +383,9 @@ function Hero({ setView }) {
 
 function SectionAbout({ setView }) {
   const parc = [
-    { period:"2023 →", org:"Indépendant — Portage salarial", role:"Business Analyst Senior · Résilience", cur:true },
-    { period:"2022–2025", org:"CGI Montréal", role:"Business Analyst Senior" },
-    { period:"2019–2022", org:"CGI Paris", role:"Consultant SIRH" },
+    { period:"Mai 2025 →", org:"Indépendant — Portage salarial", role:"Business Analyst Senior · Résilience", cur:true },
+    { period:"Juil. 2023 – Mai 2025", org:"CGI Montréal", role:"Business Analyst Senior · Mission CDPQ" },
+    { period:"2019–2023", org:"CGI Paris & Montréal", role:"Consultant Business Analyst" },
   ];
   return (
     <section style={{ background:"#faf5ee", padding:"110px 40px" }}>
@@ -394,7 +394,7 @@ function SectionAbout({ setView }) {
           <div style={{ position:"sticky", top:90 }}>
             <Ey style={{ marginBottom:18 }}>À propos</Ey>
             <h2 style={{ fontFamily:"'Fraunces',serif", fontSize:"clamp(40px,4.5vw,58px)", fontWeight:300, color:"#2a1810", lineHeight:1.1, marginBottom:28 }}>Yannick<br/>Dequant</h2>
-            <p style={{ fontSize:18, color:"#6b5040", lineHeight:1.9, marginBottom:32 }}>Consultant senior en résilience organisationnelle, passionné de systémique et de prospective. Je construis des organisations capables d'absorber les chocs et de se transformer face à l'incertitude.</p>
+            <p style={{ fontSize:18, color:"#6b5040", lineHeight:1.9, marginBottom:32 }}>Consultant senior en résilience organisationnelle, passionné de systémique et de prospective. J'accompagne les organisations dans la structuration de leur résilience afin qu'elles soient capables d'absorber les chocs et de se transformer face à l'incertitude.</p>
             <Btn outline onClick={() => setView("expertise")} sm>Voir mon expertise</Btn>
           </div>
           <div>
@@ -433,11 +433,11 @@ function SectionAbout({ setView }) {
 function SectionExpertise({ setView }) {
   const d = [
     { icon:"◈", title:"Analyse des risques & dépendances", desc:"Cartographie des dépendances critiques, exposition géopolitique, risques systémiques et tiers." },
-    { icon:"◉", title:"Continuité d'activité", desc:"BIA, plans PCA/BCP, tests et exercices de validation. Approche conforme ISO 22301." },
-    { icon:"◇", title:"IA & Résilience", desc:"Veille informationnelle, détection d'anomalies, simulation de scénarios de crise assistée par IA." },
-    { icon:"△", title:"Formation & gouvernance", desc:"Sensibilisation des équipes, KPIs de maturité, culture de résilience organisationnelle." },
     { icon:"◎", title:"Analyse métier & changement", desc:"Recueil des besoins, cartographie des processus AS-IS/TO-BE, conduite du changement." },
+    { icon:"◉", title:"Continuité d'activité", desc:"BIA, plans PCA/BCP, tests et exercices de validation. Approche conforme ISO 22301." },
+    { icon:"△", title:"Formation & gouvernance", desc:"Sensibilisation des équipes, KPIs de maturité, culture de résilience organisationnelle." },
     { icon:"◆", title:"Intégration des systèmes", desc:"Déploiement ServiceNow BCM, SIRH, ERP, RPA. Paramétrage, intégration et formation." },
+    { icon:"◇", title:"IA & Résilience", desc:"Veille informationnelle, détection d'anomalies, simulation de scénarios de crise assistée par IA." },
   ];
   return (
     <section style={{ background:"#fdf8f3", padding:"110px 40px" }}>
